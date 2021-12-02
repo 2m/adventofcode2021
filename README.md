@@ -1,4 +1,4 @@
-This repository contains solutions to various puzzles of the [Advent of Code 2021][aoc20201].
+This repository contains solutions to various puzzles of the [Advent of Code 2021][aoc2021].
 Puzzles are solved with various idioms and libraries from the Scala ecosystem.
 
 [Ammonite][amm] is used to run the code.
