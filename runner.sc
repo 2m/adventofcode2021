@@ -41,7 +41,7 @@ def exec(prefix: String)(code: (String, Assert) => Unit) = {
   code(s"$prefix-ex.txt", test.assert(true))
   code(s"$prefix.txt", test.assert(false))
 
-  val table = JTable.of().width(100).contentParser(new AnsiContentParser())
+  val table = JTable.of().width(90).contentParser(new AnsiContentParser())
   val row = table.row().padding(JPadding.DEFAULT_PADDING)
   row.col().width(3).content(" ").done()
   row.col().content("Assertion").done()
