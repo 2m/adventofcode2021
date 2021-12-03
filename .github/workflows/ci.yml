@@ -19,4 +19,4 @@ jobs:
       with:
         jvm: openjdk:1.17.0
         apps: ammonite
-    - run: just run-all
+    - run: amm --help
