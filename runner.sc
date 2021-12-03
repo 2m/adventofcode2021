@@ -4,6 +4,8 @@ import net.je2sh.asciitable.style.JPadding
 
 import $ivy.`com.lihaoyi::fansi:0.2.14`
 
+import scala.collection.immutable.SeqMap
+
 case class Assertion(
     valueEx: Option[Int] = None,
     valueReal: Option[Int] = None,
@@ -12,14 +14,9 @@ case class Assertion(
 )
 
 class Test() {
-  var results = Map.empty[String, Assertion]
+  var results = SeqMap.empty[String, Assertion]
 
-  def assert(ex: Boolean)(
-      descr: String,
-      actual: Int,
-      expectedEx: Int,
-      expectedReal: Int
-  ) = {
+  def assert(ex: Boolean)(descr: String, expectedEx: Int, expectedReal: Int)(actual: Int): Int = {
     val assertion = results.getOrElse(descr, Assertion())
     if (ex)
       results += descr -> assertion.copy(
@@ -31,10 +28,11 @@ class Test() {
         valueReal = Some(actual),
         expectedReal = Some(expectedReal)
       )
+    actual
   }
 }
 
-type Assert = (String, Int, Int, Int) => Unit
+type Assert = (String, Int, Int) => Int => Int
 
 def exec(prefix: String)(code: (String, Assert) => Unit) = {
   val test = new Test()

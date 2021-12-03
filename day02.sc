@@ -17,7 +17,7 @@ runner.exec("day02") { (fileName, assert) =>
     }
   }
 
-  assert("final position", finalPos.hoz * finalPos.depth, 150, 1383564)
+  assert("final position", 150, 1383564)(finalPos.hoz * finalPos.depth)
 
   val withAim = entries.foldLeft(WithAim()) { (pos, command) =>
     command match {
@@ -32,7 +32,7 @@ runner.exec("day02") { (fileName, assert) =>
     }
   }
 
-  assert("hoz with aim", withAim.pos.hoz, 15, 1911)
-  assert("depth with aim", withAim.pos.depth, 60, 778813)
-  assert("position with aim", withAim.pos.hoz * withAim.pos.depth, 900, 1488311643)
+  val hoz = assert("hoz with aim", 15, 1911)(withAim.pos.hoz)
+  val depth = assert("depth with aim", 60, 778813)(withAim.pos.depth)
+  assert("position with aim", 900, 1488311643)(hoz * depth)
 }

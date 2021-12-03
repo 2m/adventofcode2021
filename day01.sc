@@ -10,7 +10,7 @@ runner.exec("day01") { (fileName, assert) =>
   val measurementIncreased =
     entries.sliding(2).filter(el => el.head < el.last).length
 
-  assert("measurement increased", measurementIncreased, 7, 1722)
+  assert("measurement increased", 7, 1722)(measurementIncreased)
 
   val slidingIncreased = entries
     .sliding(3)
@@ -18,10 +18,5 @@ runner.exec("day01") { (fileName, assert) =>
     .filter(triples => triples.head.sum < triples.last.sum)
     .length
 
-  assert(
-    "three-measurement sliding window increased",
-    slidingIncreased,
-    5,
-    1748
-  )
+  assert("three-measurement sliding window increased", 5, 1748)(slidingIncreased)
 }

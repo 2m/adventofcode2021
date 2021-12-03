@@ -1,0 +1,22 @@
+---
+name: ci
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+  run:
+    name: Compile and run
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.4.0
+    - uses: extractions/setup-just@v1
+    - uses: coursier/cache-action@v6
+    - uses: laughedelic/coursier-setup@v1
+      with:
+        jvm: temurin:1.17
+        apps: ammonite
+    - run: just run-all
