@@ -28,9 +28,12 @@ List of solutions and Scala idioms/libraries used:
 | ------------------- | ---------------------------------------------------------------------- |
 | [Day 1](day01.sc)   | [Ammonite Ops][amm-ops], [Collections Sliding Window][subsets]         |
 | [Day 2](day02.sc)   | [Match on interpolator][match-interp]                                  |
+| [Day 3](day03.sc)   | [Parsing text to integers][parse-int]                                  |
+
 
 [aoc2021]:      https://adventofcode.com/2021
 [amm]:          https://ammonite.io/
 [amm-ops]:      https://ammonite.io/#Operations
 [subsets]:      https://alvinalexander.com/scala/how-to-split-sequences-subsets-groupby-partition-scala-cookbook/
 [match-interp]: https://cucumbersome.net/2020/11/28/four-new-features-of-scala-2-13-releases-that-you-probably-missed/#2130-s-interpolator-on-pattern-matching
+[parse-int]:    https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html#parseInt(java.lang.String,int)
