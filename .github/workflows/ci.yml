@@ -17,6 +17,5 @@ jobs:
     - uses: coursier/cache-action@v6
     - uses: coursier/setup-action@v1
       with:
-        jvm: temurin:1.17
         apps: ammonite
     - run: just run-all
