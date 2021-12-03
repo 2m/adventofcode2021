@@ -12,11 +12,10 @@ jobs:
     name: Compile and run
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.4.0
+    - uses: actions/checkout@v2
     - uses: extractions/setup-just@v1
-    - uses: coursier/cache-action@v6
-    - uses: coursier/setup-action@v1
+    - uses: yilinwei/setup-ammonite@master
       with:
-        jvm: openjdk:1.17.0
-        apps: ammonite
-    - run: amm --help
+        ammonite-version: 2.4.1
+        scala-version: 2.13
+    - run: just run-all
