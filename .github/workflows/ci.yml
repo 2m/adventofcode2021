@@ -17,5 +17,6 @@ jobs:
     - uses: coursier/cache-action@v6
     - uses: coursier/setup-action@v1
       with:
+        jvm: openjdk:1.17.0
         apps: ammonite
     - run: just run-all
