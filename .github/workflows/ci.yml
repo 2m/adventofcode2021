@@ -14,8 +14,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: extractions/setup-just@v1
-    - uses: yilinwei/setup-ammonite@master
-      with:
-        ammonite-version: 2.4.1
-        scala-version: 2.13
+    - run: sudo sh -c '(echo "#!/usr/bin/env sh" && curl -L https://github.com/com-lihaoyi/Ammonite/releases/download/2.4.1/2.13-2.4.1) > /usr/local/bin/amm && chmod +x /usr/local/bin/amm'
     - run: just run-all
