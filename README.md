@@ -30,6 +30,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 2](day02.sc)   | [Match on interpolator][match-interp]                                  |
 | [Day 3](day03.sc)   | [Parsing text to integers][parse-int]                                  |
 | [Day 4](day04.sc)   | [Mutable vars][vars]                                                   |
+| [Day 5](day05.sc)   | [zip][]                                                                |
 
 [aoc2021]:      https://adventofcode.com/2021
 [amm]:          https://ammonite.io/
@@ -38,3 +39,4 @@ List of solutions and Scala idioms/libraries used:
 [match-interp]: https://cucumbersome.net/2020/11/28/four-new-features-of-scala-2-13-releases-that-you-probably-missed/#2130-s-interpolator-on-pattern-matching
 [parse-int]:    https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html#parseInt(java.lang.String,int)
 [vars]:         https://docs.scala-lang.org/overviews/scala-book/two-types-variables.html
+[zip]:          https://alvinalexander.com/scala/how-to-merge-sequential-collection-pairs-zip-unzip-scala-cookbook/
