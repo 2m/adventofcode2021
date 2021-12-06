@@ -31,6 +31,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 3](day03.sc)   | [Parsing text to integers][parse-int]                                  |
 | [Day 4](day04.sc)   | [Mutable vars][vars]                                                   |
 | [Day 5](day05.sc)   | [zip][]                                                                |
+| [Day 6](day06.sc)   | [Map.updatedWith][updated-with]                                        |
 
 [aoc2021]:      https://adventofcode.com/2021
 [amm]:          https://ammonite.io/
@@ -40,3 +41,4 @@ List of solutions and Scala idioms/libraries used:
 [parse-int]:    https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html#parseInt(java.lang.String,int)
 [vars]:         https://docs.scala-lang.org/overviews/scala-book/two-types-variables.html
 [zip]:          https://alvinalexander.com/scala/how-to-merge-sequential-collection-pairs-zip-unzip-scala-cookbook/
+[updated-with]: https://www.scala-lang.org/api/2.13.x/scala/collection/immutable/Map.html#updatedWith[V1%3E:V](key:K)(remappingFunction:Option[V]=%3EOption[V1]):CC[K,V1]

@@ -3,7 +3,6 @@
 import ammonite.ops._
 
 import $file.runner
-import os.truncate
 
 case class Point(x: Int, y: Int)
 
