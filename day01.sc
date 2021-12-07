@@ -4,7 +4,7 @@ import ammonite.ops._
 
 import $file.runner
 
-runner.exec("day01") { (fileName, assert) =>
+runner.exec[Int]("day01") { (fileName, assert) =>
   val entries = read.lines(pwd / fileName).map(_.toInt)
 
   val measurementIncreased =

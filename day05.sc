@@ -6,7 +6,7 @@ import $file.runner
 
 case class Point(x: Int, y: Int)
 
-runner.exec("day05") { (fileName, assert) =>
+runner.exec[Int]("day05") { (fileName, assert) =>
   val entries = read.lines(pwd / fileName).toList
 
   val lines = entries.map { case s"$x1,$y1 -> $x2,$y2" =>

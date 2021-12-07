@@ -6,18 +6,18 @@ import $ivy.`com.lihaoyi::fansi:0.2.14`
 
 import scala.collection.immutable.SeqMap
 
-case class Assertion(
-    valueEx: Option[Int] = None,
-    valueReal: Option[Int] = None,
-    expectedEx: Option[Int] = None,
-    expectedReal: Option[Int] = None
+case class Assertion[T](
+    valueEx: Option[T] = None,
+    valueReal: Option[T] = None,
+    expectedEx: Option[T] = None,
+    expectedReal: Option[T] = None
 )
 
-class Test() {
-  var results = SeqMap.empty[String, Assertion]
+class Test[T]() {
+  var results = SeqMap.empty[String, Assertion[T]]
 
-  def assert(ex: Boolean)(descr: String, expectedEx: Int, expectedReal: Int)(actual: Int): Int = {
-    val assertion = results.getOrElse(descr, Assertion())
+  def assert(ex: Boolean)(descr: String, expectedEx: T, expectedReal: T)(actual: T): T = {
+    val assertion = results.getOrElse(descr, Assertion[T]())
     if (ex)
       results += descr -> assertion.copy(
         valueEx = Some(actual),
@@ -32,10 +32,10 @@ class Test() {
   }
 }
 
-type Assert = (String, Int, Int) => Int => Int
+type Assert[T] = (String, T, T) => T => T
 
-def exec(prefix: String)(code: (String, Assert) => Unit) = {
-  val test = new Test()
+def exec[T](prefix: String)(code: (String, Assert[T]) => Unit) = {
+  val test = new Test[T]()
   code(s"$prefix-ex.txt", test.assert(true))
   code(s"$prefix.txt", test.assert(false))
 

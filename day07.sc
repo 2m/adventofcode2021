@@ -4,7 +4,7 @@ import ammonite.ops._
 
 import $file.runner
 
-runner.exec("day07") { (fileName, assert) =>
+runner.exec[Int]("day07") { (fileName, assert) =>
   val entries = read.lines(pwd / fileName).head.split(",").map(_.toInt).toList
   val maxPos = entries.max
 

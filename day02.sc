@@ -7,7 +7,7 @@ import $file.runner
 case class Position(hoz: Int = 0, depth: Int = 0)
 case class WithAim(aim: Int = 0, pos: Position = Position())
 
-runner.exec("day02") { (fileName, assert) =>
+runner.exec[Int]("day02") { (fileName, assert) =>
   val entries = read.lines(pwd / fileName)
   val finalPos = entries.foldLeft(Position()) { (pos, command) =>
     command match {

@@ -4,7 +4,7 @@ import ammonite.ops._
 
 import $file.runner
 
-runner.exec("day03") { (fileName, assert) =>
+runner.exec[Int]("day03") { (fileName, assert) =>
   val entries = read.lines(pwd / fileName).toList.map(_.toCharArray.toList)
   val halfReports = entries.size / 2
 

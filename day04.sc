@@ -33,7 +33,7 @@ object BingoTable {
     BingoTable(values.map(_.map(Entry.apply)))
 }
 
-runner.exec("day04") { (fileName, assert) =>
+runner.exec[Int]("day04") { (fileName, assert) =>
   val entries = read.lines(pwd / fileName).toList
   val (drawn, tables) = entries.splitAt(1)
   val drawnNumbers = drawn.head.split(',').toList.map(_.toInt)

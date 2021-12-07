@@ -4,7 +4,7 @@ import ammonite.ops._
 
 import $file.runner
 
-runner.exec("day06") { (fileName, assert) =>
+runner.exec[Long]("day06") { (fileName, assert) =>
   val entries = read.lines(pwd / fileName).head.split(",").toList.map(_.toInt)
 
   val popMap = entries.groupBy(identity).view.mapValues(_.size.toLong).toMap
@@ -25,6 +25,6 @@ runner.exec("day06") { (fileName, assert) =>
       after(days - 1, withKids)
   }
 
-  println(after(80, popMap).view.values.sum)
-  println(after(256, popMap).view.values.sum)
+  assert("population after 80", 5934, 393019)(after(80, popMap).view.values.sum)
+  assert("population after 256", 26984457539L, 1757714216975L)(after(256, popMap).view.values.sum)
 }
