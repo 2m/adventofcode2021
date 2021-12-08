@@ -33,6 +33,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 5](day05.sc)   | [zip][]                                                                |
 | [Day 6](day06.sc)   | [Map.updatedWith][updated-with]                                        |
 | [Day 7](day07.sc)   | [Sum of consecutive numbers][sum-cons]                                 |
+| [Day 8](day08.sc)   | [Set intersection][sum-cons]                                           |
 
 [aoc2021]:      https://adventofcode.com/2021
 [amm]:          https://ammonite.io/
@@ -44,3 +45,4 @@ List of solutions and Scala idioms/libraries used:
 [zip]:          https://alvinalexander.com/scala/how-to-merge-sequential-collection-pairs-zip-unzip-scala-cookbook/
 [updated-with]: https://www.scala-lang.org/api/2.13.x/scala/collection/immutable/Map.html#updatedWith[V1%3E:V](key:K)(remappingFunction:Option[V]=%3EOption[V1]):CC[K,V1]
 [sum-cons]:     https://math.stackexchange.com/questions/1100897/sum-of-consecutive-numbers
+[sets]:         https://alvinalexander.com/scala/union-intersection-difference-scala-sets/
