@@ -46,6 +46,6 @@ runner.exec[Int]("day09") { (fileName, assert) =>
   } yield grid.basin(x, y, Set.empty)
 
   assert("3 largest basin product", 1134, 1123524) {
-    basins.distinct.map(_.size).sortBy(s => -s).take(3).reduce(_ * _)
+    basins.distinct.map(_.size).sortBy(-_).take(3).product
   }
 }
