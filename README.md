@@ -36,6 +36,8 @@ List of solutions and Scala idioms/libraries used:
 | [Day 8](day08.sc)   | [Set intersection][sum-cons]                                           |
 | [Day 9](day09.sc)   | [foldLeft][fold-left]                                                  |
 | [Day 10](day10.sc)  | [Extractor objects][extractor]                                         |
+| [Day 11](day11.sc)  | [Unfold][unfold]                                         |
+
 
 [aoc2021]:      https://adventofcode.com/2021
 [amm]:          https://ammonite.io/
@@ -50,3 +52,4 @@ List of solutions and Scala idioms/libraries used:
 [sets]:         https://alvinalexander.com/scala/union-intersection-difference-scala-sets/
 [fold-left]:    http://allaboutscala.com/tutorials/chapter-8-beginner-tutorial-using-scala-collection-functions/scala-foldleft-example/
 [extractor]:    https://docs.scala-lang.org/tour/extractor-objects.html
+[unfold]:       https://blog.genuine.com/2020/07/scala-unfold/
