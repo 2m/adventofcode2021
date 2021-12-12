@@ -5,7 +5,7 @@ import ammonite.ops._
 import $file.runner
 
 runner.exec[Int]("day11") { (fileName, assert) =>
-  val entries = read.lines(pwd / fileName).toList.map(_.split("").map(_.toInt).toList)
+  val entries = read.lines(pwd / fileName).toList.map(_.map(_.asDigit).toList)
 
   val xMax = entries.head.size - 1
   val yMax = entries.size - 1
@@ -65,7 +65,7 @@ runner.exec[Int]("day11") { (fileName, assert) =>
     steps().drop(99).take(1).toList.map(_._2).head
   }
 
-  assert("mega flash", 195, 0) {
+  assert("mega flash", 195, 437) {
     steps().zipWithIndex.collectFirst {
       case ((levels, _), step) if levels.size == 0 =>
         step

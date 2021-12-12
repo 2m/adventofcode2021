@@ -36,7 +36,8 @@ List of solutions and Scala idioms/libraries used:
 | [Day 8](day08.sc)   | [Set intersection][sum-cons]                                           |
 | [Day 9](day09.sc)   | [foldLeft][fold-left]                                                  |
 | [Day 10](day10.sc)  | [Extractor objects][extractor]                                         |
-| [Day 11](day11.sc)  | [Unfold][unfold]                                         |
+| [Day 11](day11.sc)  | [Unfold][unfold]                                                       |
+| [Day 12](day12.sc)  |                                                                        |
 
 
 [aoc2021]:      https://adventofcode.com/2021
