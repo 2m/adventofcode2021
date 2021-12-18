@@ -39,6 +39,7 @@ List of solutions and Scala idioms/libraries used:
 | [Day 11](day11.sc)  | [Unfold][unfold]                                                       |
 | [Day 12](day12.sc)  |                                                                        |
 | [Day 13](day13.sc)  |                                                                        |
+| [Day 14](day14.sc)  |                                                                        |
 
 [aoc2021]:      https://adventofcode.com/2021
 [amm]:          https://ammonite.io/
